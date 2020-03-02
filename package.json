@@ -1,0 +1,19 @@
+{
+  "name": "duyi-react-ssr",
+  "version": "1.0.0",
+  "description": "react-ssr courses in DUYI edu cop.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DuYi-Edu/DuYi-ReactSSR.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DuYi-Edu/DuYi-ReactSSR/issues"
+  },
+  "homepage": "https://github.com/DuYi-Edu/DuYi-ReactSSR#readme"
+}
