@@ -1,8 +1,9 @@
-const express = require("express");
+import React from "react";
+import App from "./App";
+import ReactDom from "react-dom/server";
 
-const app = express();
-
-app.get("*", (req, res) => {
+export default (req, res) => {
+  const componentHTML = ReactDom.renderToString(<App />);
   const html = `
   <!DOCTYPE html>
   <html lang="en">
@@ -13,14 +14,10 @@ app.get("*", (req, res) => {
   </head>
   <body>
     <div id="root">
-      Hello 1111
+      ${componentHTML}
     </div>
   </body>
   </html>
   `;
   res.send(html);
-});
-
-app.listen(8080, () => {
-  console.log("server start on 8080");
-});
+};
