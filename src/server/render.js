@@ -1,6 +1,7 @@
 import React from "react";
 import App from "./App";
 import ReactDom from "react-dom/server";
+import getScripts from "./getScripts";
 
 export default (req, res) => {
   const componentHTML = ReactDom.renderToString(<App />);
@@ -13,9 +14,8 @@ export default (req, res) => {
     <title>SSR</title>
   </head>
   <body>
-    <div id="root">
-      ${componentHTML}
-    </div>
+    <div id="root">${componentHTML}</div>
+    ${getScripts()}
   </body>
   </html>
   `;

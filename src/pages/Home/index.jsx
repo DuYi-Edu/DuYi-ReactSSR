@@ -1,5 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function() {
-  return <h1>Home 页面</h1>;
+  const [number, setNumber] = useState(0);
+  return (
+    <div>
+      <h1>首页 : {number}</h1>
+      <button
+        onClick={() => {
+          setNumber(number + 1);
+        }}
+      >
+        点击
+      </button>
+    </div>
+  );
 }
