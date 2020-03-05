@@ -2,8 +2,7 @@ import getScripts from "./getScripts";
 import getLinks from "./getLinks";
 
 export default componentHTML => {
-  const html = `
-  <!DOCTYPE html>
+  const html = `<!DOCTYPE html>
   <html lang="en">
   <head>
     <meta charset="UTF-8"/>
