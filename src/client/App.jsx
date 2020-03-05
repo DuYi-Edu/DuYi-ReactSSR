@@ -1,7 +1,12 @@
 import React from "react";
-import Home from "@/pages/Home";
+import { BrowserRouter } from "react-router-dom";
 import "../assets/global.css";
+import RouteApp from "@/routes/RouteApp";
 
 export default () => {
-  return <Home />;
+  return (
+    <BrowserRouter>
+      <RouteApp />
+    </BrowserRouter>
+  );
 };

@@ -1,3 +1,6 @@
+body{
+  margin: 0;
+}
 .YMLqj2XOArWp0hz6uki-f {
   border: 1px solid #333;
   background: rgb(108, 197, 226);
@@ -12,8 +15,5 @@
   width: 300px;
   height: 300px;
 }
-body{
-  padding: 50px;
-}
 
-/*# sourceMappingURL=bundle.6b8b2.css.map*/
+/*# sourceMappingURL=bundle.17aa1.css.map*/
