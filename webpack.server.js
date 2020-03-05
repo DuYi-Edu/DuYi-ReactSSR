@@ -8,6 +8,9 @@ const serverConfig = {
   output: {
     filename: "server.js",
     path: path.resolve(__dirname, "./dist")
+  },
+  module: {
+    rules: [{ test: /\.css$/, use: ["isomorphic-style-loader", "css-loader?modules"] }]
   }
 };
 

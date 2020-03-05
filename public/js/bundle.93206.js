@@ -28635,6 +28635,17 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./src/assets/global.css":
+/*!*******************************!*\
+  !*** ./src/assets/global.css ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "./src/client/App.jsx":
 /*!****************************!*\
   !*** ./src/client/App.jsx ***!
@@ -28647,6 +28658,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _pages_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/pages/Home */ "./src/pages/Home/index.jsx");
+/* harmony import */ var _assets_global_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/global.css */ "./src/assets/global.css");
+/* harmony import */ var _assets_global_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_global_css__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
@@ -28676,6 +28690,18 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.hydrate(react__WEBPACK_IMPORTED
 
 /***/ }),
 
+/***/ "./src/pages/Home/index.css":
+/*!**********************************!*\
+  !*** ./src/pages/Home/index.css ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"beautybutton":"YMLqj2XOArWp0hz6uki-f"};
+
+/***/ }),
+
 /***/ "./src/pages/Home/index.jsx":
 /*!**********************************!*\
   !*** ./src/pages/Home/index.jsx ***!
@@ -28687,10 +28713,14 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.hydrate(react__WEBPACK_IMPORTED
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ "./src/pages/Home/index.css");
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_1__);
+
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   const [number, setNumber] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "\u9996\u9875 : ", number), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: _index_css__WEBPACK_IMPORTED_MODULE_1___default.a.beautybutton,
     onClick: () => {
       setNumber(number + 1);
     }
@@ -28700,4 +28730,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.5e888.js.map
+//# sourceMappingURL=bundle.93206.js.map
