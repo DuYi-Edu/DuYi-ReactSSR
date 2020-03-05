@@ -8,7 +8,8 @@ const clientConfig = {
   entry: "./src/client",
   output: {
     filename: "js/bundle.[hash:5].js",
-    path: path.resolve(__dirname, "./public")
+    path: path.resolve(__dirname, "./public"),
+    publicPath: "/"
   },
   plugins: [
     new CleanWebpackPlugin({
@@ -20,7 +21,21 @@ const clientConfig = {
   ],
   module: {
     rules: [
-      { test: /\.css$/, use: [MiniCssExtractPlugin.loader, "css-loader?modules"] }
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader?modules"]
+      },
+      {
+        test: /\.(png)|(jpg)|(gif)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "img/[name].[hash:5].[ext]"
+            }
+          }
+        ]
+      }
     ]
   }
 };
