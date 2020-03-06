@@ -1,22 +1,35 @@
-import React, { useState } from "react";
-import styles from "./index.css";
-import pngUrl from "../../assets/chengge.png";
+import React from "react";
+import { connect } from "react-redux";
+import { increase, decrease } from "../../store/actions/counter";
 
-export default function() {
-  const [number, setNumber] = useState(0);
+function Counter({ number, onIncrease, onDecrease }) {
   return (
     <div>
-      <h1>首页 : {number}</h1>
-      <img src={pngUrl} alt="" />
-      <div className={styles.bg}></div>
-      <button
-        className={styles.beautybutton}
-        onClick={() => {
-          setNumber(number + 1);
-        }}
-      >
-        点击
-      </button>
+      <h1>首页</h1>
+      <p>
+        <button onClick={onDecrease}>减</button>
+        <strong>{number}</strong>
+        <button onClick={onIncrease}>加</button>
+      </p>
     </div>
   );
 }
+
+function mapStateToProps(state) {
+  return {
+    number: state.counter
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    onIncrease() {
+      dispatch(increase());
+    },
+    onDecrease() {
+      dispatch(decrease());
+    }
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);
