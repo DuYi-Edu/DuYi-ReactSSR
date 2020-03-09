@@ -3,7 +3,9 @@ import { BrowserRouter } from "react-router-dom";
 import "../assets/global.css";
 import RouteApp from "@/routes/RouteApp";
 import { Provider } from "react-redux";
-import store from "../store";
+import makeStore from "../store";
+
+const store = makeStore();
 
 export default () => {
   return (

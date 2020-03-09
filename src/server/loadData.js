@@ -1,11 +1,10 @@
 import { matchRoutes } from "react-router-config";
 import routeConfig from "../routes/routeConfig";
-import store from "../store";
 
 /**
  * 负责服务端渲染前的加载
  */
-export default function(pathname) {
+export default function(pathname, store) {
   const matches = matchRoutes(routeConfig, pathname);
   const proms = [];
   for (const match of matches) {
