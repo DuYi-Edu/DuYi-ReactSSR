@@ -1,7 +1,8 @@
 import getScripts from "./getScripts";
 import getLinks from "./getLinks";
+import store from "../store";
 
-export default componentHTML => {
+export default (componentHTML, path) => {
   const html = `<!DOCTYPE html>
   <html lang="en">
   <head>
@@ -12,6 +13,10 @@ export default componentHTML => {
   </head>
   <body>
     <div id="root">${componentHTML}</div>
+    <script>
+      window.pageDatas = ${JSON.stringify(store.getState())}
+      window.requestPath = "${path}";
+    </script>
     ${getScripts()}
   </body>
   </html>
