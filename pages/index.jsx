@@ -1,3 +1,12 @@
+import Head from "next/head";
+
 export default () => {
-  return <h1>Index 首页</h1>
-}
+  return (
+    <div>
+      <Head>
+        <title>首页</title>
+      </Head>
+      <h1>Index 首页</h1>
+    </div>
+  );
+};
