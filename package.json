@@ -4,7 +4,9 @@
   "description": "react-ssr courses in DUYI edu cop.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/DuYi-Edu/DuYi-ReactSSR/issues"
   },
-  "homepage": "https://github.com/DuYi-Edu/DuYi-ReactSSR#readme"
+  "homepage": "https://github.com/DuYi-Edu/DuYi-ReactSSR#readme",
+  "dependencies": {
+    "next": "^9.3.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  }
 }
