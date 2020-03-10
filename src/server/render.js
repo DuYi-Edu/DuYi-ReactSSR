@@ -17,5 +17,12 @@ export default async (req, res) => {
     <App location={req.path} context={context} store={store} />
   );
   const html = getHTML(componentHTML, req.path, store);
+  if (context.url) {
+    res.redirect(301, context.url);
+    return;
+  }
+  if (context.resCode) {
+    res.status(context.resCode);
+  }
   res.send(html);
 };
