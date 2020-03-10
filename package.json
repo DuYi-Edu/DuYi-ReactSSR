@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/DuYi-Edu/DuYi-ReactSSR/issues"
   },
-  "homepage": "https://github.com/DuYi-Edu/DuYi-ReactSSR#readme",
-  "devDependencies": {
-    "eslint": "^6.8.0"
-  }
+  "homepage": "https://github.com/DuYi-Edu/DuYi-ReactSSR#readme"
 }
