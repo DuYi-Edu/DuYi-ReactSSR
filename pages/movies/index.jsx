@@ -1,11 +1,16 @@
-import Head from "next/head"
+import Head from "next/head";
+import { getMovies } from "../../services/movieService";
 
 export default () => {
-  console.log("movies render")
-  return <div>
-    <Head>
-      <title>电影页</title>
-    </Head>
-    <h1>电影页</h1>
-  </div>
-}
+  getMovies().then(resp => {
+    console.log(resp);
+  });
+  return (
+    <div>
+      <Head>
+        <title>电影页</title>
+      </Head>
+      <h1>电影页</h1>
+    </div>
+  );
+};
