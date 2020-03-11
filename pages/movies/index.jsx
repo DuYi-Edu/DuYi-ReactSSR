@@ -1,6 +1,7 @@
 import Head from "next/head"
 
 export default () => {
+  console.log("movies render")
   return <div>
     <Head>
       <title>电影页</title>
