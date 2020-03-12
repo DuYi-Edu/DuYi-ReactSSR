@@ -1,11 +1,17 @@
 import Header from "../components/Header";
-import "./global.css"
+import "./global.css";
 
-export default ({ Component, ...props }) => {
+export default ({ Component, pageProps }) => {
   return (
     <div>
       <Header />
-      <Component {...props} />
+      <div
+        style={{
+          padding: 40
+        }}
+      >
+        <Component {...pageProps} />
+      </div>
     </div>
   );
 };
