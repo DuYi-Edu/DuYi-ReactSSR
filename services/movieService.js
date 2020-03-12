@@ -11,10 +11,6 @@ export async function getMovies(page = 1, limit = 10) {
 }
 
 export async function getMovie(id) {
-  return new Promise(resolve => {
-    setTimeout(async () => {
-      let resp = await request.get("/api/movie/" + id);
-      resolve(resp.data);
-    }, 1000);
-  });
+  let resp = await request.get("/api/movie/" + id);
+  return resp.data;
 }

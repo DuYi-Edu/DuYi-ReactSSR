@@ -15,7 +15,6 @@ export default ({ movie }) => {
 };
 
 export async function getStaticProps({ params }) {
-  console.log("getStaticProps");
   const resp = await getMovie(params.id);
   return {
     props: {
@@ -32,7 +31,6 @@ export async function getStaticPaths() {
       id: m._id
     }
   }));
-  console.log("getStaticPaths");
   return {
     paths,
     fallback: true
