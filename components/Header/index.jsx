@@ -25,13 +25,9 @@ export default () => {
           </Link>
         </li>
         <li>
-          <button
-            onClick={() => {
-              router.push("/movies/[...params]", "/movies/a/b/c");
-            }}
-          >
-            跳转到 [...params].jsx
-          </button>
+          <Link href="/login">
+            <a>登录</a>
+          </Link>
         </li>
       </ul>
     </div>
