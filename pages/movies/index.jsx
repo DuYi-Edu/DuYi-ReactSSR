@@ -4,7 +4,6 @@ import Pager from "../../components/Pager";
 import { useRouter } from "next/router";
 
 export default ({ movies, page, total, limit }) => {
-  console.log("render");
   const router = useRouter();
   return (
     <div>
@@ -38,7 +37,6 @@ export default ({ movies, page, total, limit }) => {
 // req, res, query
 export async function getServerSideProps({ query }) {
   const page = +query.page || 1;
-  console.log("getServerSideProps");
   const resp = await getMovies(page, 10);
   return {
     props: {

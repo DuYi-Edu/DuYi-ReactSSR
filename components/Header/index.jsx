@@ -25,6 +25,11 @@ export default () => {
           </Link>
         </li>
         <li>
+          <Link href="/redux">
+            <a>redux测试</a>
+          </Link>
+        </li>
+        <li>
           <Link href="/login">
             <a>登录</a>
           </Link>
