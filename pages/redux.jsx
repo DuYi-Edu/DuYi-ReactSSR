@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import * as actions from "../store/actions/counter";
-import makeStore from "../store";
+import withStore from "../util/widthStore"
 
 function Page({ number, increase, decrease, asyncIncrease, asyncDecrease }) {
   return (
@@ -43,13 +43,8 @@ const Wrapper = connect(mapState, mapDispatch)(Page);
 
 export default Wrapper;
 
-export async function getServerSideProps() {
-  const store = makeStore();
+const func = async function({store}){
   await store.dispatch(actions.asyncIncrease());
-  // 仓库有数据了
-  return {
-    props: {
-      _initialState: store.getState()
-    }
-  };
 }
+
+export const getServerSideProps = withStore(func);
