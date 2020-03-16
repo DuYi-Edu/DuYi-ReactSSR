@@ -1,14 +1,29 @@
 import axios from "axios";
+import cookie from "cookie";
 
-const config = {};
+let instance;
 if (typeof window === "undefined") {
   //服务器
-  config.baseURL = "http://yuanjin.tech:5100/";
-} else {
-  //浏览器
-  config.baseURL = "http://yuanjin.tech:5100/";
+  instance = getServerInstance();
+}
+else{
+  instance = axios.create();
 }
 
-const instance = axios.create(config);
-
 export default instance;
+
+export function getServerInstance(req) {
+  const config = {
+    baseURL: "http://yuanjin.tech:5100/"
+  };
+  if (req) {
+    const cookies = req.headers["cookie"];
+    const cookieObj = cookie.parse(cookies);
+    if (cookieObj.token) {
+      config.headers = {
+        authorization: cookieObj.token
+      };
+    }
+  }
+  return axios.create(config);
+}

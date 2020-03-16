@@ -1,7 +1,7 @@
 import request from "./request";
 
-export async function getMovies(page = 1, limit = 10) {
-  let resp = await request.get("/api/movie", {
+export async function getMovies(page = 1, limit = 10, axios = request) {
+  let resp = await axios.get("/api/movie", {
     params: {
       page,
       limit
@@ -10,7 +10,7 @@ export async function getMovies(page = 1, limit = 10) {
   return resp.data;
 }
 
-export async function getMovie(id) {
-  let resp = await request.get("/api/movie/" + id);
+export async function getMovie(id, axios = request) {
+  let resp = await axios.get("/api/movie/" + id);
   return resp.data;
 }
