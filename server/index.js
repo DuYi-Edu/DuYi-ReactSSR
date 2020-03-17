@@ -13,4 +13,4 @@ app.get("/api/test", (req, res) => {
   res.send("data from server");
 });
 
-app.listen(5010);
+app.listen(5000);
